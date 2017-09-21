@@ -1,3 +1,6 @@
+The gist can be viewed [here](http://bl.ocks.org/bibinmjose/465959c52fbc7f9b5ff58b60f4d19fa6)
+
+
 ## Summary
 
 Dataset contains median statistics of baseball players grouped by `handedness`. Each row contains `handedness`, `height`,`weight`,`avg`, `HR` and `Count`. 
