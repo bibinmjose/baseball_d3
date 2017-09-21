@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="http://d3js.org/d3.v4.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+  <style>
+    circle.dimple-series-1{
+      fill:red;
+      stroke:black;
+    }
+    h2{
+      text-align: center;
+    }
+  </style>
+    <script type="text/javascript">
+      function draw(data) {
+      
+      /*
+        D3.js setup code
+      */
+
+          "use strict";
+          var margin = 75,
+              width = 800 - margin,
+              height = 500 - margin;
+
+          // debugger;
+          // Header
+          d3.select("body")
+            .append("h2")
+            .text("Baseball Data - Home Runs (based on handedness)")
+
+          // chart and svg element
+
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+              .append('g')
+              .attr('class','chart');
+
+          function agg_handedness(leaves){
+            return{
+              'HR' : d3.median(leaves, function(d){return d['HR'];}),
+              'avg' : d3.median(leaves, function(d){return d['avg'];}),
+              'height' : d3.median(leaves, function(d){return d['height'];}),
+              'weight' : d3.median(leaves, function(d){return d['weight'];}),
+            }
+          }
+
+          var median_data = d3.nest()
+                              .key(function(d) { return d.handedness; })
+                              .rollup(agg_handedness)
+                              .entries(data)
+
+          debugger;
+      /*
+        Dimple.js Chart construction code
+      */
+          var chart = new dimple.chart(svg, median_data);
+          chart.setBounds(margin,margin,width-margin,height-margin);
+          chart.addCategoryAxis("x","key")
+                .title = "Handedness";
+          chart.addMeasureAxis("y","")
+                .title = "Median Home Runs";
+          chart.addSeries(null, dimple.plot.bar)
+          debugger;
+          var myLegend = chart.addLegend(width+15, 1.5*margin, 60, 300, "Right");
+          // debugger;
+          chart.draw();
+
+        };
+      </script>
+  </head>
+<body>
+  <script type="text/javascript">
+  /*
+    Use D3 (not dimple.js) to load the CSV file
+    and pass the contents of it to the draw function
+    */
+  d3.csv("baseball_data_modified.csv", function(d) {
+
+    // d['height'] = +d['height'];
+    // d['weight'] = +d['weight'];
+    d['avg'] = +d['avg'];
+    d['HR'] = +d['HR'];
+    return d;
+  },draw);
+  </script>
+</body>
+</html>
