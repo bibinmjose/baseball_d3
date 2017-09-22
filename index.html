@@ -12,12 +12,19 @@
     h2{
       text-align: left;
       font-family: Arial;
-      font-size: 18px;
+      font-size: 20px;
     }
     h3{
       text-align: left;
       font-family: Arial;
       font-size: 14px;
+      font-weight: norml;
+    }
+    p{
+      text-align: left;
+      font-family: Arial;
+      font-size: 10px;
+      font-weight: lighter;
     }
   </style>
     <script type="text/javascript">
@@ -46,6 +53,9 @@
           d3.select("body")
             .append("h3")
             .text("Performance based on handedness")
+          d3.select("body")
+            .append("p")
+            .text("Finding#1: Left handers have higher Batting Average and Home Runs")
 
         // first chart and svg element
         var svg = dimple.newSvg("body", width,height);
@@ -76,15 +86,19 @@
         myChart.addSeries("Median Home Runs",dimple.plot.bubble,[x,y1,z]);
         myChart.addSeries("Median Batting Average", dimple.plot.bubble,[x,y2,z]);
 
-        myChart.addLegend(4*margin,25,300,20, "right");
+        myChart.addLegend(3*margin,25,300,20, "right");
 
         myChart.draw(1000);
+
+        // ------------------------------------------------------------------------------------
+        // second chart and svg element
         
         d3.select("body")
             .append("h3")
             .text("Body metrics based on handedness")
-        // ------------------------------------------------------------------------------------
-        // second chart and svg element
+        d3.select("body")
+            .append("p")
+            .text("Finding#2: Both handers have lower weight and height compared to others")
 
 
         var svg2 = dimple.newSvg("body", width,height);
