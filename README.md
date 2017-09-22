@@ -1,5 +1,6 @@
 The gist can be viewed [here](http://bl.ocks.org/bibinmjose/465959c52fbc7f9b5ff58b60f4d19fa6)
 
+Github Repository [link](https://github.com/bibinmjose/baseball_d3)
 
 ## Summary
 
@@ -20,6 +21,8 @@ Dual axis is used to plot two parameters into one chart with categorical variabl
 Tooltip animation allows explicitly read plotted data. Animation of the second graph is delayed as it has to be read after the first one.
 
 A smoothes spline is added to each series of data as a guide to eye.
+
+Summary of each graph is included on top of graph.
 
 
 
