@@ -40,7 +40,7 @@ Completely revamped the visualization to explain performance based on handedness
 #### Improvements made
 Not able to plot bars side by side using Dimplejs, hence moved to bubble plot. Size of the bubble is maped to population used to find the median.
 
-### Feedback 3 - [[index\_2.html](http://bl.ocks.org/bibinmjose/eef59f1fb00a05fb05b01c4db29d93ca) --> [index.html](http://bl.ocks.org/bibinmjose/465959c52fbc7f9b5ff58b60f4d19fa6)]
+### Feedback 3 - [[index\_2.html](http://bl.ocks.org/bibinmjose/eef59f1fb00a05fb05b01c4db29d93ca) --> [index\_3.html](http://bl.ocks.org/bibinmjose/raw/41871e73f032953fcba0bc18cbf4c912)]
 * May be add body statistics to show how height and weight vary
 * Add a line to guide the eye for each series 
 #### Explain improvement made
@@ -48,7 +48,16 @@ Two seperate graphs 1) for performance and 2) for body statistics.
 A smoothed line is added for each series to guide the eye.
 Animation is added for aesthetic loading of data.
 
+### Feedback 4 - [[index\_3.html](http://bl.ocks.org/bibinmjose/raw/41871e73f032953fcba0bc18cbf4c912) --> [index.html](http://bl.ocks.org/bibinmjose/465959c52fbc7f9b5ff58b60f4d19fa6)]
+* Color coding - currently blue and red are double encoded. Since the charts are so similar and your legend labels all start with "Median" I think it is important to use four different colours, one for each variable - Home Runs, Batting Average, Height and Weight.
+ 
+#### Explain improvement made
+Color coding is updated with a unique color for each series `avg`,`HR`,`height`, `weight`
+
+
+
 ## Resouces
 
-* (http://dimplejs.org/examples_viewer.html?id=bubbles_vertical_lollipop)
-* (http://bl.ocks.org/judemoon/c48b65e8570eacd9c6ed7d6a1c5aab93)
+* http://dimplejs.org/examples_viewer.html?id=bubbles_vertical_lollipop
+* http://bl.ocks.org/judemoon/c48b65e8570eacd9c6ed7d6a1c5aab93
+* http://www.d3noob.org/

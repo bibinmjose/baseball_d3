@@ -53,6 +53,7 @@
               width = 750 - 2*margin,
               height = 500 - 2*margin;
 
+          // debugger;
           // Header
           d3.select("body")
             .append("h2")
@@ -136,7 +137,6 @@
         y2_2.title = "Weight";
         y2_2.overrideMax = 200;
         y2_2.overrideMin = 170;
-        // y2_2.color.fill("#e2cf3d")
 
         var z_2 = myChart2.addCategoryAxis("z", "Count");
 
@@ -148,8 +148,6 @@
 
         myChart2.addSeries("Median Height",dimple.plot.bubble,[x_2,y1_2,z_2]);
         myChart2.addSeries("Median Weight", dimple.plot.bubble,[x_2,y2_2,z_2]);
-        myChart2.assignColor("Median Height", "orange");
-        myChart2.assignColor("Median Weight", "lightgreen");
 
         myChart2.addLegend(3*margin,1,300,20, "right");
 
