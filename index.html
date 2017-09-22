@@ -5,27 +5,40 @@
   <script src="http://d3js.org/d3.v4.min.js"></script>
   <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
   <style>
-    circle.dimple-series-1{
-      fill:red;
-      stroke:black;
+    body: {
+      background-color: #efe8d2;
+      align-items: center;
     }
     h2{
-      text-align: left;
+      text-align: center;
       font-family: Arial;
       font-size: 20px;
     }
     h3{
       text-align: left;
       font-family: Arial;
-      font-size: 14px;
+      font-size: 18px;
       font-weight: norml;
     }
     p{
       text-align: left;
       font-family: Arial;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: lighter;
     }
+    p_large{
+      text-align: center;
+      font-family: Arial;
+      font-size: 14px;
+      font-weight: normal;
+    }
+    .chart{
+      align-content: center;
+    }
+    #chartContainer {
+      align-content: center;
+    }
+
   </style>
     <script type="text/javascript">
       "use strict";
@@ -44,7 +57,12 @@
           // Header
           d3.select("body")
             .append("h2")
-            .text("Baseball Player statistics")
+            .text("Udacity Project 6: Baseball Player statistics")
+
+          // Description
+          d3.select("body")
+            .append("p_large")
+            .text("The two visualizations are created based on the statistics of 1,157 baseball players. The dependency of handedness of players in their Performance and Body metrics is explained here.")
 
           d3.select("body")
             .append("div")
