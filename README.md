@@ -1,3 +1,5 @@
+# Data Visualization Using Dimple.js (D3 library)
+
 The gist can be viewed [here](http://bl.ocks.org/bibinmjose/465959c52fbc7f9b5ff58b60f4d19fa6)
 
 Github Repository [link](https://github.com/bibinmjose/baseball_d3)
@@ -65,7 +67,7 @@ Running the webpage locally requires starting a webserver.
 		`http://localhost:8080/index.html`
 4. Change `index.html` to `index_1.html` to view that version.
 
-## Resouces
+## Resources
 
 * http://dimplejs.org/examples_viewer.html?id=bubbles_vertical_lollipop
 * http://bl.ocks.org/judemoon/c48b65e8570eacd9c6ed7d6a1c5aab93
