@@ -25,7 +25,6 @@ A smoothes spline is added to each series of data as a guide to eye.
 Summary of each graph is included on top of graph.
 
 
-
 ## Feedback
 
 ### Feedback 1 - [[index\_initial.html](http://bl.ocks.org/bibinmjose/raw/d9db996f2c13e6ec5af92aed8c60e24b/) --> [index\_1.html](http://bl.ocks.org/bibinmjose/57898f960e99190f902ea7c774df2439#file-index-html)]
@@ -54,7 +53,17 @@ Animation is added for aesthetic loading of data.
 #### Explain improvement made
 Color coding is updated with a unique color for each series `avg`,`HR`,`height`, `weight`
 
+## Setup (on Mac)
 
+Running the webpage locally requires starting a webserver. 
+
+1. download/clone the repository from the github [link](https://github.com/bibinmjose/baseball_d3)
+2. Using terminal cd into the folder containing the files and start the webserver as follows
+		`python -m http.server 8080`
+	this will start a webserver on the port 8080.
+3. Open web browser and type:
+		`http://localhost:8080/index.html`
+4. Change `index.html` to `index_1.html` to view that version.
 
 ## Resouces
 
